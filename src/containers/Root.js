@@ -18,7 +18,6 @@ class Root extends Component {
   }
 
   getMessage({email, password, remember}) {
-    //let {email, password} = this.state.formContent;
     let isTestUser2 = isTestUser(email, password);
     if (isTestUser2.test) {
       if (remember) Cookies.set("user", email, { expires: 7 });
