@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import './root.less';
-
-const styles = {
-  height: '100%',
-  background: '#333'
-}
+import PropTypes from "prop-types";
+import Form from "./Form/Form";
 
 class Root extends Component {
   render() {
     return (
-      <div style={styles}>
-        <h1 className='welcome-header'>Welcome to testing React!</h1>
+      <div>
+        <h1>LiveChat Form</h1>
+        <Form>
+        <div>krap123</div>
+        </Form>
       </div>
-    )
+    );
   }
 }
+
+Root.propTypes = {
+   
+};
 
 export default Root;

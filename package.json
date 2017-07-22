@@ -9,6 +9,7 @@
     "dist": "dist"
   },
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "yargs": "^3.31.0"
@@ -23,6 +24,11 @@
     "chai": "^3.4.1",
     "css-loader": "^0.28.4",
     "enzyme": "^1.2.0",
+    "eslint": "^4.3.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-react": "^7.1.0",
+    "eslint-watch": "^3.1.2",
     "json-loader": "^0.5.4",
     "karma": "^0.13.19",
     "karma-chai": "^0.1.0",
