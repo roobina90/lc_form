@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import './Form.less';
 import Field from "../../controls/Field";
 import Checkbox from "../../controls/Checkbox";
-import {isEmailValid, isPasswordValid} from  "../../validation/formValidation";
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ class Form extends Component {
       remember: false
     };
     this.handleInputChange = this.handleInputChange.bind(this);
-    //this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
   handleInputChange(name, value) {
@@ -22,18 +22,18 @@ class Form extends Component {
     });
   }
 
-  // handleSubmit(evt) {
-  //   console.log(this.state);
-  //   evt.preventDefault();
-  // }
+  handleSubmit(evt) {
+    evt.preventDefault();    
+    this.props.handleSubmit(this.state);
+  }
 
   render() {
     return (
       <div>
-        <form method="POST" action="" onSubmit={this.props.handleSubmit}>
+        <form method="POST" action="" onSubmit={this.handleSubmit}>
           <fieldset>
-            <Field name="email" type="text" label="E-mail" onChange={this.handleInputChange} value={this.state.email} validation={isEmailValid}/>
-            <Field name="password" type="password" label="Hasło" onChange={this.handleInputChange} value={this.state.password} validation={isPasswordValid} />
+            <Field name="email" type="text" label="E-mail" onChange={this.handleInputChange} value={this.state.email} />
+            <Field name="password" type="password" label="Hasło" onChange={this.handleInputChange} value={this.state.password} />
             <Checkbox name="remember" label="Zapamiętaj mnie" onChange={this.handleInputChange} value={this.state.remember} />
             <input type="submit" value="login" />
           </fieldset>
