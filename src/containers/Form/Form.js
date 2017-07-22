@@ -9,7 +9,12 @@ class Form extends Component {
   render() {
     return (
       <div>
-      {this.props.children}
+        <form method="POST" action="">
+          <fieldset>
+            {this.props.children}
+            <input type="submit" value="login" />
+          </fieldset>
+        </form>
       </div>
     );
   }
