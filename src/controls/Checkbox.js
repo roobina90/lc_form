@@ -5,21 +5,19 @@ import './Checkbox.less';
 class Checkbox extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            value: false
-        };
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(evt) {
-        this.setState({ value: !this.state.value });
+        this.props.onChange(this.props.name, evt.target.checked);
+        //this.setState({ value: !this.state.value });
         //console.log(evt.target.checked);
         //evt.preventDefault();
     }
     render() {
         return (
             <div>
-                <input name={this.props.name} type="checkbox" onChange={this.handleChange} checked={this.state.value} />
+                <input name={this.props.name} type="checkbox" onChange={this.handleChange} checked={this.props.value} />
                 <label htmlFor={this.props.name}>{this.props.label}:</label>
             </div>
         );
@@ -27,8 +25,10 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
-    name: PropTypes.string,
-    label: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    value: PropTypes.bool.isRequired
 };
 
 export default Checkbox;
