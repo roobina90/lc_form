@@ -9,6 +9,7 @@
     "dist": "dist"
   },
   "dependencies": {
+    "js-cookie": "^2.1.4",
     "prop-types": "^15.5.10",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
