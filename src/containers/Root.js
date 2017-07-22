@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './root.less';
 
 const styles = {
   height: '100%',
@@ -16,4 +17,3 @@ class Root extends Component {
 }
 
 export default Root;
-

@@ -16,7 +16,7 @@ var config = {
     ],
     // allows you to require without the .js at end of filenames
     // import Component from 'component' vs. import Component from 'component.js'
-    extensions: ['', '.js', '.json', '.jsx']
+    extensions: ['', '.js', '.json', '.jsx', 'less']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -31,7 +31,13 @@ var config = {
         // babel is alias for babel-loader
         // npm i babel-core babel-loader --save-dev
         loader: 'babel'
+      },
+      {
+         test: /\.less?$/,
+         exclude: /(node_modules|bower_components)/,
+         loader: 'style!css!less'
       }
+     
     ],
   }
 }
