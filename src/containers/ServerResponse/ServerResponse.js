@@ -5,20 +5,20 @@ import './ServerResponse.less';
 class ServerResponse extends Component {
   constructor(props) {
     super(props);
-   //this.formContent = null;
   }
 
   render() {
     return (
-      <div>
-      {this.props.message}
+  <div className={"lc-serverResponse lc-serverResponse--"+ (this.props.isAuthorized ? "success" : "error")}>
+        {this.props.message}
       </div>
     );
   }
 }
 
 ServerResponse.propTypes = {
-    message: PropTypes.string
+    message: PropTypes.string.isRequired,
+    isAuthorized: PropTypes.bool.isRequired
 };
 
 export default ServerResponse;

@@ -28,7 +28,7 @@ export function validateEmailPassword(email, password) {
     } else {
         return {
             test: false,
-            message: emailValidity.message + " " + passwordValidity.message
+            message: emailValidity.message + " and " + passwordValidity.message
         };
     }
 }
