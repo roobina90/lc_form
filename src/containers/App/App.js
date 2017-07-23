@@ -31,7 +31,7 @@ class Root extends Component {
   render() {
     return (
       <div className="lc-app">
-        <h1 className="lc-app-title">Login</h1>
+        <h1 className="lc-app-title">LogIn</h1>
         {!this.state.isAuthorized && <Form handleSubmit={this.authorizeUser} />}
         {(this.state.formContent != null || this.state.isAuthorized) && <ServerResponse isAuthorized={this.state.isAuthorized} message={this.state.serverMessage} />}
       </div>
