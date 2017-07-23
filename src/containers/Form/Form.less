@@ -1,0 +1,32 @@
+@import "../../styles/variables.less";
+
+
+.lc-form {
+    
+    &-fieldset {
+        padding: 20px;
+        //text-align: center;
+        margin: 0 auto;
+        width: auto;
+    }
+    &-submit {
+        display: block;
+        background: rgba(66, 134, 244, 0.75);
+        border: none;
+        padding: 10px 20px;
+        width: 200px;
+        text-align: center;
+        margin: 0 auto;
+        text-transform: uppercase;
+        color: @baseColor;
+        font-size: 20px;
+           box-shadow: inset 0px 0px 69px -6px rgba(0,0,0,0.75);
+           cursor: pointer;
+           transition: all 0.1s linear;
+
+           &:hover, &:active, &:focus {
+               outline: none;
+               box-shadow: inset 0px 0px 69px -6px rgba(0,0,0,0.75), 0px 0px 38px -1px rgba(0,0,0,0.75);
+           }
+    }
+}

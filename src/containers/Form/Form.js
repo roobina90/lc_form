@@ -31,12 +31,12 @@ class Form extends Component {
     //console.log(this.state.remember);
     return (
       <div>
-        <form method="POST" action="" onSubmit={this.handleSubmit}>
-          <fieldset>
+        <form className="lc-form" method="POST" action="" onSubmit={this.handleSubmit}>
+          <fieldset className="lc-form-fieldset">
             <Field name="email" type="text" label="E-mail" onChange={this.handleInputChange} value={this.state.email} />
             <Field name="password" type="password" label="Password" onChange={this.handleInputChange} value={this.state.password} />
             <Checkbox name="remember" label="Remember me" onChange={this.handleInputChange} value={this.state.remember} />
-            <input type="submit" value="login" />
+            <input className="lc-form-submit" type="submit" value="login" />
           </fieldset>
         </form>
       </div>
