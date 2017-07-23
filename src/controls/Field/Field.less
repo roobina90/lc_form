@@ -14,6 +14,7 @@
         padding-right: 8px;
         border-right: 1px solid @baseColor;  
         left: 35px;
+        line-height: 40px;
     }
 
 .lc-field {
@@ -25,7 +26,9 @@
     }
     &--password:before {
     .make-awesomeIcon("\f084");
-    font-size: 15px;
+    font-size: 16px;
+    padding-right: 5px;
+    left: 32px;
       
     }
 &-input {
@@ -33,11 +36,14 @@
     height: 50px;
     width: 300px;
     border: none;
+    color: @baseColor;
    box-shadow: inset 0px 0px 69px -6px rgba(0,0,0,0.75);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: @inputBackground;
+    transition: all 0.1s linear;
 
     &:active, &:focus {
         outline: none;
+        border: 1px solid @baseColor;
     }
 
 }

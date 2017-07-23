@@ -28,13 +28,14 @@ class Form extends Component {
   }
 
   render() {
+    //console.log(this.state.remember);
     return (
       <div>
         <form method="POST" action="" onSubmit={this.handleSubmit}>
           <fieldset>
             <Field name="email" type="text" label="E-mail" onChange={this.handleInputChange} value={this.state.email} />
-            <Field name="password" type="password" label="Hasło" onChange={this.handleInputChange} value={this.state.password} />
-            <Checkbox name="remember" label="Zapamiętaj mnie" onChange={this.handleInputChange} value={this.state.remember} />
+            <Field name="password" type="password" label="Password" onChange={this.handleInputChange} value={this.state.password} />
+            <Checkbox name="remember" label="Remember me" onChange={this.handleInputChange} value={this.state.remember} />
             <input type="submit" value="login" />
           </fieldset>
         </form>

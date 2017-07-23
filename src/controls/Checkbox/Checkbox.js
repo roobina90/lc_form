@@ -9,16 +9,13 @@ class Checkbox extends Component {
     }
 
     handleChange(evt) {
-        this.props.onChange(this.props.name, evt.target.checked);
-        //this.setState({ value: !this.state.value });
-        //console.log(evt.target.checked);
-        //evt.preventDefault();
+        this.props.onChange(this.props.name, !this.props.value);
     }
     render() {
         return (
-            <div>
-                <input name={this.props.name} type="checkbox" onChange={this.handleChange} checked={this.props.value} />
-                <label htmlFor={this.props.name}>{this.props.label}:</label>
+            <div className="lc-checkbox" onClick={this.handleChange}>
+                <input className="lc-checkbox-input" name={this.props.name} type="checkbox"  data-checked={this.props.value} checked={this.props.value} />
+                <label className="lc-checkbox-label" htmlFor={this.props.name}>{this.props.label}</label>
             </div>
         );
     }

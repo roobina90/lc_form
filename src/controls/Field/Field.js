@@ -7,18 +7,17 @@ import './Field.less';
 class Field extends Component {
     constructor(props) {
         super(props);
-        this.state = {label: this.props.label}
+        this.state = { label: this.props.label };
         this.handleChange = this.handleChange.bind(this);
         this.hidePlaceholder = this.hidePlaceholder.bind(this);
         this.showPlaceholder = this.showPlaceholder.bind(this);
     }
     hidePlaceholder() {
-        this.setState({label: ""});
+        this.setState({ label: "" });
     }
 
     showPlaceholder() {
-        
-        this.setState({label: this.props.label});
+        this.setState({ label: this.props.label });
     }
 
     handleChange(evt) {
@@ -27,7 +26,9 @@ class Field extends Component {
     }
     render() {
         return (
-                <p className={"lc-field lc-field--"+this.props.name}><input className="lc-field-input" onFocus={this.hidePlaceholder} onBlur={this.showPlaceholder} placeholder={this.state.label} onBlur={this.onBlur} type={this.props.type} name={this.props.name} onChange={this.handleChange} value={this.props.value} /></p>
+            <p className={"lc-field lc-field--" + this.props.name}>
+                <input className="lc-field-input" onFocus={this.hidePlaceholder} onBlur={this.showPlaceholder} placeholder={this.state.label} type={this.props.type} name={this.props.name} onChange={this.handleChange} value={this.props.value} />
+            </p>
         );
     }
 }
