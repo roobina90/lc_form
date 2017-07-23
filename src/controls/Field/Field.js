@@ -16,10 +16,7 @@ class Field extends Component {
     }
     render() {
         return (
-            <div>
-                <label htmlFor={this.props.name}>{this.props.label}:</label>
-                <input onBlur={this.onBlur} type={this.props.type} name={this.props.name} onChange={this.handleChange} value={this.props.value} />
-            </div>
+                <p className={"lc-field lc-field--"+this.props.name}><input className="lc-field-input" placeholder={this.props.label} onBlur={this.onBlur} type={this.props.type} name={this.props.name} onChange={this.handleChange} value={this.props.value} /></p>
         );
     }
 }

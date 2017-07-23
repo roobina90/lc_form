@@ -33,11 +33,18 @@ var config = {
         loader: 'babel!eslint'
       },
       {
-         test: /\.less?$/,
-         exclude: /(node_modules|bower_components)/,
-         loader: 'style!css!less'
+        test: /\.less?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'style!css!less'
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        exclude: /node_modules/,
+        loaders: [
+          "url?limit=30000&name=images/[name].[ext]"
+        ]
       }
-     
+
     ],
   }
 }
