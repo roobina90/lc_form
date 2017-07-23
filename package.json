@@ -31,6 +31,7 @@
     "eslint-plugin-react": "^7.1.0",
     "eslint-watch": "^3.1.2",
     "file-loader": "^0.11.2",
+    "ignore-styles": "^5.0.1",
     "json-loader": "^0.5.4",
     "karma": "^0.13.19",
     "karma-chai": "^0.1.0",
@@ -56,7 +57,7 @@
     "test:dev": "npm run test -- --watch",
     "build": "webpack",
     "dev": "webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist",
-    "old_test": "mocha --compilers js:babel-register --require ./test/test_helper.js --recursive",
+    "old_test": "mocha --compilers js:babel-register --require ignore-styles --require ./test/test_helper.js --recursive",
     "old_test:watch": "npm run old_test -- --watch"
   },
   "repository": {
