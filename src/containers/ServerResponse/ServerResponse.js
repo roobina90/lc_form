@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
+import './ServerResponse.less';
 
 class ServerResponse extends Component {
   constructor(props) {

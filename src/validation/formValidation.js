@@ -1,4 +1,4 @@
-export function isEmailValid(email) {
+function isEmailValid(email) {
     let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let test = re.test(email);
     return {
@@ -8,7 +8,7 @@ export function isEmailValid(email) {
 }
 
 
-export function isPasswordValid(pass) {
+function isPasswordValid(pass) {
     let re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
     let test = re.test(pass);
     return {

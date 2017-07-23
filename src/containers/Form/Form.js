@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import './Form.less';
-import Field from "../../controls/Field";
-import Checkbox from "../../controls/Checkbox";
+import Field from "../../controls/Field/Field";
+import Checkbox from "../../controls/Checkbox/Checkbox";
 
 class Form extends Component {
   constructor(props) {

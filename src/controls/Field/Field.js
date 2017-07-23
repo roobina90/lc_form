@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import './Field.less';
-import Error from './Error';
+//import Error from '../Error/Error';
 
 
 class Field extends Component {

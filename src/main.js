@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Root from './containers/Root';
+import App from './containers/App/App';
 import "./styles/normalize.less";
 
-render(<Root />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));

@@ -1,7 +1,7 @@
 {
   "name": "react-testing-starter-kit",
   "version": "0.1.0",
-  "description": "React starter kit with nice testing environment set up.",
+  "description": "LiveChat Form",
   "main": "src/main.js",
   "directories": {
     "test": "tests",
@@ -55,7 +55,7 @@
     "build": "webpack",
     "dev": "webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist",
     "old_test": "mocha --compilers js:babel-register --require ./test/test_helper.js --recursive",
-    "old_test:watch": "npm test -- --watch"
+    "old_test:watch": "npm run old_test -- --watch"
   },
   "repository": {
     "type": "git",

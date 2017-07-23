@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import Cookies from "js-cookie";
-import Form from "./Form/Form";
-import ServerResponse from "./ServerResponse";
-import { validateEmailPassword, isTestUser } from "../validation/formValidation";
+import Form from "../Form/Form";
+import ServerResponse from "../ServerResponse/ServerResponse";
+import { validateEmailPassword, isTestUser } from "../../validation/formValidation";
+import "./App.less";
 
 class Root extends Component {
   constructor(props) {
