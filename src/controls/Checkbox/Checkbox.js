@@ -14,7 +14,7 @@ class Checkbox extends Component {
     render() {
         return (
             <div className="lc-checkbox" onClick={this.handleChange}>
-                <input className="lc-checkbox-input" name={this.props.name} type="checkbox"  data-checked={this.props.value} checked={this.props.value} />
+                <input className="lc-checkbox-input" name={this.props.name} type="checkbox" checked={this.props.value} />
                 <label className="lc-checkbox-label" htmlFor={this.props.name}>{this.props.label}</label>
             </div>
         );
