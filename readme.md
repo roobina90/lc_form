@@ -1,3 +1,10 @@
+# Uruchomienie
+
+```
+npm install
+npm run dev
+```
+
 # Zadanie
 W ramach zadania kandydat powinien stworzyć stronę html z zaimplementowaną obsługą formularza po stronie front-end'u.
 

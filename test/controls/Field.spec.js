@@ -15,7 +15,7 @@ describe('(Control) Field', () => {
 
   describe('class name', () => {
     const wrapper = shallow(
-      <Field name="email"/>
+      <Field name="email" type="password" />
     )
     it('should render with className lc-field', () => {
       expect(wrapper.prop('className')).to.eql('lc-field lc-field--email');

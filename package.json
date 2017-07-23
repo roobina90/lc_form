@@ -53,12 +53,9 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "test": "node_modules/.bin/karma start karma.config.js",
-    "test:dev": "npm run test -- --watch",
-    "build": "webpack",
     "dev": "webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist",
-    "old_test": "mocha --compilers js:babel-register --require ignore-styles --require ./test/test_helper.js --recursive",
-    "old_test:watch": "npm run old_test -- --watch"
+    "test": "mocha --compilers js:babel-register --require ignore-styles --require ./test/test_helper.js --recursive",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
